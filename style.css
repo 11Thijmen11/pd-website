@@ -819,8 +819,264 @@ body {
 
 .projecten-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     gap: 2rem;
+}
+
+.project-card {
+    background: var(--card);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(14, 165, 233, 0.08);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(14, 165, 233, 0.2);
+}
+
+.project-status {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.status-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.in-progress {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.1));
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-badge.completed {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(59, 130, 246, 0.1));
+    color: var(--primary);
+    border: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.project-icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    filter: grayscale(0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+}
+
+.project-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(14, 165, 233, 0.15));
+    transition: var(--transition);
+}
+
+.project-card:hover .project-logo {
+    filter: drop-shadow(0 8px 20px rgba(14, 165, 233, 0.25));
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 0;
+}
+
+.project-tagline {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 600;
+    font-style: italic;
+    margin: 0;
+}
+
+.project-description {
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-tag {
+    padding: 0.4rem 0.9rem;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(59, 130, 246, 0.05));
+    border: 1px solid rgba(14, 165, 233, 0.15);
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.tech-tag:hover {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(59, 130, 246, 0.1));
+    transform: translateY(-2px);
+}
+
+.project-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    background: var(--background);
+    border: 2px solid rgba(14, 165, 233, 0.2);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.project-link span {
+    font-size: 1.1rem;
+}
+
+.project-link:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+}
+
+.project-link.repo-placeholder {
+    position: relative;
+    background: rgba(100, 116, 139, 0.05);
+    border-color: rgba(100, 116, 139, 0.2);
+    color: var(--text-light);
+    cursor: not-allowed;
+}
+
+.project-link.repo-placeholder:hover {
+    background: rgba(100, 116, 139, 0.08);
+    color: var(--text-light);
+    border-color: rgba(100, 116, 139, 0.3);
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.coming-soon-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    background: var(--text);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.coming-soon-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--text);
+}
+
+.tooltip-icon {
+    margin-right: 0.5rem;
+}
+
+.project-link.repo-placeholder:hover .coming-soon-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.project-highlight {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(59, 130, 246, 0.03));
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.project-highlight p {
+    margin: 0;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.project-highlight strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Placeholder card for more projects */
+.placeholder-card {
+    border: 2px dashed rgba(14, 165, 233, 0.2);
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.02), rgba(59, 130, 246, 0.01));
+    text-align: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+.placeholder-card:hover {
+    transform: none;
+    box-shadow: var(--shadow);
+    border-color: rgba(14, 165, 233, 0.3);
+}
+
+.placeholder-card .placeholder-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.placeholder-card h3 {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.placeholder-card p {
+    color: var(--text-light);
+    margin: 0;
 }
 
 .project-placeholder {
@@ -1439,6 +1695,28 @@ main {
 
     .contact-section h2 {
         font-size: 1.75rem;
+    }
+
+    .projecten-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .project-status {
+        position: static;
+        margin-bottom: 1rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-link {
+        width: 100%;
+        justify-content: center;
     }
 }
 
