@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (!opdracht) {
-        window.location.href = 'index.html';
+        window.location.href = 'pd-opdrachten.html';
         return;
     }
 

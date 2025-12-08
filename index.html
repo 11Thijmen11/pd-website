@@ -4,49 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Development Portfolio</title>
+    <title>Portfolio - Thijmen Bout</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 
 <body>
-    <header class="pd-header">
-        <h1>Personal Development</h1>
-        <p>Ontdek mijn persoonlijke groei en ontwikkeling tijdens de studie</p>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Thijmen Bout</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pd-opdrachten.html">PD Opdrachten</a></li>
+                <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="over-mij.html">Over Mij</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-header">
+        <div class="hero-content">
+            <h1>Portfolio van Thijmen Bout</h1>
+            <p class="hero-subtitle">Student, Developer & Creatieve Denker</p>
+            <p class="hero-description">Welkom op mijn portfolio! Hier vind je mijn persoonlijke ontwikkeling, projecten en wie ik ben.</p>
+            <div class="hero-actions">
+                <a href="pd-opdrachten.html" class="btn-primary">Bekijk PD Opdrachten</a>
+                <a href="projecten.html" class="btn-secondary">Mijn Projecten</a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="intro">
-            <h2>Welkom bij mijn PD Portfolio</h2>
-            <p>Hier documenteer ik mijn reis van persoonlijke ontwikkeling, reflecties en belangrijke leermomenten
-                tijdens mijn studie. Elke opdracht vertegenwoordigt een stap vooruit in mijn groei.</p>
+    <main class="home-main">
+        <section class="home-section">
+            <div class="section-cards">
+                <a href="pd-opdrachten.html" class="feature-card">
+                    <div class="card-icon">📚</div>
+                    <h3>PD Opdrachten</h3>
+                    <p>Mijn persoonlijke ontwikkeling en reflecties tijdens mijn studie</p>
+                    <span class="card-arrow">→</span>
+                </a>
+
+                <a href="projecten.html" class="feature-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Projecten</h3>
+                    <p>Ontdek de projecten waar ik aan heb gewerkt en mijn vaardigheden</p>
+                    <span class="card-arrow">→</span>
+                </a>
+
+                <a href="over-mij.html" class="feature-card">
+                    <div class="card-icon">👤</div>
+                    <h3>Over Mij</h3>
+                    <p>Leer meer over wie ik ben, mijn achtergrond en interesses</p>
+                    <span class="card-arrow">→</span>
+                </a>
+            </div>
         </section>
 
-        <div class="intro-actions" style="text-align:center; margin-bottom:2rem;">
-            <a class="linkedin-btn" href="https://www.linkedin.com/in/thijmen-bout-b343b7371" target="_blank" rel="noopener noreferrer">Volg mij op LinkedIn</a>
-        </div>
-
-        <section class="opdrachten-lijst">
-            <h2>Mijn Ontwikkeling</h2>
-            <div id="opdrachten-container"></div>
-            <button id="nieuwe-opdracht-btn">+ Nieuwe opdracht toevoegen</button>
-
-            <form id="nieuwe-opdracht-form" class="verborgen">
-                <input type="text" id="titel" placeholder="Wat is de titel van je opdracht?" required />
-                <textarea id="beschrijving" placeholder="Beschrijf de opdracht en je leerdoelen..." required></textarea>
-                <div class="form-buttons">
-                    <button type="submit">Opdracht opslaan</button>
-                    <button type="button" id="annuleer-btn">Annuleren</button>
-                </div>
-            </form>
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Laten we connecten</h2>
+                <p>Interesse in samenwerking of wil je meer weten? Neem contact op via LinkedIn!</p>
+                <a class="linkedin-btn" href="https://www.linkedin.com/in/thijmen-bout-b343b7371" target="_blank" rel="noopener noreferrer">Volg mij op LinkedIn</a>
+            </div>
         </section>
     </main>
 
     <footer class="pd-footer">
-        <p>&copy; 2025 Personal Development | Gemaakt door Thijmen</p>
+        <p>&copy; 2025 Thijmen Bout | Gemaakt met passie</p>
     </footer>
 </body>
 

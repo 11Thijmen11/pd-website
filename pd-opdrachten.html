@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PD Opdrachten - Thijmen Bout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Thijmen Bout</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pd-opdrachten.html" class="active">PD Opdrachten</a></li>
+                <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="over-mij.html">Over Mij</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Personal Development Opdrachten</h1>
+        <p>Mijn reis van persoonlijke groei en ontwikkeling tijdens de studie</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Mijn PD Reis</h2>
+            <p>Hier documenteer ik mijn reis van persoonlijke ontwikkeling, reflecties en belangrijke leermomenten
+                tijdens mijn studie. Elke opdracht vertegenwoordigt een stap vooruit in mijn groei.</p>
+        </section>
+
+        <section class="opdrachten-lijst">
+            <h2>Mijn Opdrachten</h2>
+            <div id="opdrachten-container"></div>
+            <button id="nieuwe-opdracht-btn">+ Nieuwe opdracht toevoegen</button>
+
+            <form id="nieuwe-opdracht-form" class="verborgen">
+                <input type="text" id="titel" placeholder="Wat is de titel van je opdracht?" required />
+                <textarea id="beschrijving" placeholder="Beschrijf de opdracht en je leerdoelen..." required></textarea>
+                <div class="form-buttons">
+                    <button type="submit">Opdracht opslaan</button>
+                    <button type="button" id="annuleer-btn">Annuleren</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pd-footer">
+        <p>&copy; 2025 Thijmen Bout | Gemaakt met passie</p>
+    </footer>
+</body>
+
+</html>
