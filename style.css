@@ -1114,6 +1114,124 @@ body {
    RESPONSIVE DESIGN
    ============================================ */
 
+/* ============================================
+   PD OPDRACHTEN PAGE (Hardcoded Cards)
+   ============================================ */
+
+.opdrachten-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.pd-card {
+    background: var(--card);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(14, 165, 233, 0.08);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.pd-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(14, 165, 233, 0.2);
+}
+
+.pd-status {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.pd-icon {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    filter: grayscale(0.1);
+}
+
+.pd-card h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 0;
+}
+
+.pd-tagline {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    font-weight: 600;
+    font-style: italic;
+    margin: 0;
+}
+
+.pd-description {
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.pd-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.pd-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    background: var(--background);
+    border: 2px solid rgba(14, 165, 233, 0.2);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.pd-link span {
+    font-size: 1.1rem;
+}
+
+.pd-link:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+}
+
+.pd-footer-note {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.pd-footer-note p {
+    margin: 0;
+    color: var(--text-light);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
 .pd-header {
     background: var(--gradient);
     position: relative;
@@ -1715,6 +1833,28 @@ main {
     }
 
     .project-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .opdrachten-container {
+        grid-template-columns: 1fr;
+    }
+
+    .pd-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .pd-status {
+        position: static;
+        margin-bottom: 1rem;
+    }
+
+    .pd-links {
+        flex-direction: column;
+    }
+
+    .pd-link {
         width: 100%;
         justify-content: center;
     }

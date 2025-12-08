@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -38,18 +37,157 @@
         </section>
 
         <section class="opdrachten-lijst">
-            <h2>Mijn Opdrachten</h2>
-            <div id="opdrachten-container"></div>
-            <button id="nieuwe-opdracht-btn">+ Nieuwe opdracht toevoegen</button>
+            <div class="opdrachten-container">
+                
+                <!-- PD1 Les 1 -->
+                <div class="pd-card">
+                    <div class="pd-status">
+                        <span class="status-badge completed">Voltooid</span>
+                    </div>
+                    <div class="pd-icon">📝</div>
+                    <h3>PD1 Les 1</h3>
+                    <p class="pd-tagline">Portfolio & LinkedIn Setup</p>
+                    <p class="pd-description">
+                        Tijdens de eerste les heb ik mijn portfolio en een deel van mijn LinkedIn opgezet. Daar is ook deze website ontstaan waar ik mijn Personal Development opdrachten in verwerk.
+                    </p>
+                    
+                    <div class="pd-tech">
+                        <span class="tech-tag">Portfolio</span>
+                        <span class="tech-tag">LinkedIn</span>
+                        <span class="tech-tag">Web Development</span>
+                    </div>
 
-            <form id="nieuwe-opdracht-form" class="verborgen">
-                <input type="text" id="titel" placeholder="Wat is de titel van je opdracht?" required />
-                <textarea id="beschrijving" placeholder="Beschrijf de opdracht en je leerdoelen..." required></textarea>
-                <div class="form-buttons">
-                    <button type="submit">Opdracht opslaan</button>
-                    <button type="button" id="annuleer-btn">Annuleren</button>
+                    <div class="pd-footer-note">
+                        <p><em>Geen documentatie beschikbaar</em></p>
+                    </div>
                 </div>
-            </form>
+
+                <!-- PD1 Les 2 en 3 -->
+                <div class="pd-card">
+                    <div class="pd-status">
+                        <span class="status-badge completed">Voltooid</span>
+                    </div>
+                    <div class="pd-icon">💭</div>
+                    <h3>PD1 Les 2 en 3</h3>
+                    <p class="pd-tagline">Motivatie, drijfveren & feedback</p>
+                    <p class="pd-description">
+                        Tijdens deze lessen ben ik bezig geweest met motivatie, drijfveren, feedback en reflecteren.
+                    </p>
+                    
+                    <div class="pd-tech">
+                        <span class="tech-tag">Zelfreflectie</span>
+                        <span class="tech-tag">Feedback</span>
+                        <span class="tech-tag">Motivatie</span>
+                    </div>
+
+                    <div class="pd-links">
+                        <a href="https://dehaagsehogeschool-my.sharepoint.com/:w:/g/personal/24042498_student_hhs_nl/IQCJvXWbPTMiRr5jkvDYadioATqq4CAEAxIkroJi87H1L3g?e=4V77oF" target="_blank" rel="noopener noreferrer" class="pd-link">
+                            <span>📄</span> Bekijk Document
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PD2 Les 1 Voorbereiding MBTI -->
+                <div class="pd-card">
+                    <div class="pd-status">
+                        <span class="status-badge completed">Voltooid</span>
+                    </div>
+                    <div class="pd-icon">🧠</div>
+                    <h3>PD2 Les 1 - Voorbereiding MBTI</h3>
+                    <p class="pd-tagline">Persoonlijkheidsanalyse voorbereiding</p>
+                    <p class="pd-description">
+                        In deze opdracht ben ik bezig geweest met de voorbereiding voor een gezamenlijke MBTI opdracht.
+                    </p>
+                    
+                    <div class="pd-tech">
+                        <span class="tech-tag">MBTI</span>
+                        <span class="tech-tag">Persoonlijkheid</span>
+                        <span class="tech-tag">Zelfinzicht</span>
+                    </div>
+
+                    <div class="pd-links">
+                        <a href="https://docs.google.com/document/d/194tOu3C79kh7CyYHNu3tUswESD9iOEBrUKUqNijnOXQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="pd-link">
+                            <span>📄</span> Bekijk Document
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PD2 Les 2 HBO-I job event -->
+                <div class="pd-card">
+                    <div class="pd-status">
+                        <span class="status-badge completed">Voltooid</span>
+                    </div>
+                    <div class="pd-icon">💼</div>
+                    <h3>PD2 Les 2 - HBO-I Job Event</h3>
+                    <p class="pd-tagline">Netwerkverkenning & carrièreontwikkeling</p>
+                    <p class="pd-description">
+                        Tijdens deze opdracht ben ik naar het HBO-I job event geweest en heb ik hierbij een aantal vragen gemaakt.
+                    </p>
+                    
+                    <div class="pd-tech">
+                        <span class="tech-tag">Netwerken</span>
+                        <span class="tech-tag">Carrière</span>
+                        <span class="tech-tag">HBO-I</span>
+                    </div>
+
+                    <div class="pd-links">
+                        <a href="https://docs.google.com/document/d/1G5PJfRuuVkimu5lVARWIMsbdYboZoSiar7qd5TpWCiA/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="pd-link">
+                            <span>📄</span> Bekijk Document
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PD2 MBTI -->
+                <div class="pd-card">
+                    <div class="pd-status">
+                        <span class="status-badge completed">Voltooid</span>
+                    </div>
+                    <div class="pd-icon">🎤</div>
+                    <h3>PD2 MBTI</h3>
+                    <p class="pd-tagline">Persoonlijkheidspresentatie</p>
+                    <p class="pd-description">
+                        Tijdens deze opdracht heb ik een presentatie gegeven over mijn MBTI persoonlijkheid en vergeleken met mijn groepsgenoten.
+                    </p>
+                    
+                    <div class="pd-tech">
+                        <span class="tech-tag">MBTI</span>
+                        <span class="tech-tag">Presentatie</span>
+                        <span class="tech-tag">Groepswerk</span>
+                    </div>
+
+                    <div class="pd-links">
+                        <a href="https://docs.google.com/presentation/d/1ZFDiH3PDWGbK4LpHAWeGkdUjZCNbl4COks6PVK_SogU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="pd-link">
+                            <span>📊</span> Bekijk Presentatie
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PD2 Conflicten -->
+                <div class="pd-card">
+                    <div class="pd-status">
+                        <span class="status-badge completed">Voltooid</span>
+                    </div>
+                    <div class="pd-icon">🤝</div>
+                    <h3>PD2 Conflicten</h3>
+                    <p class="pd-tagline">Conflicthantering & communicatie</p>
+                    <p class="pd-description">
+                        Tijdens deze opdracht ben ik bezig geweest met conflicten en hoe deze op te lossen.
+                    </p>
+                    
+                    <div class="pd-tech">
+                        <span class="tech-tag">Communicatie</span>
+                        <span class="tech-tag">Conflictoplossing</span>
+                        <span class="tech-tag">Samenwerking</span>
+                    </div>
+
+                    <div class="pd-links">
+                        <a href="https://docs.google.com/document/d/1X6jiQvKNvfwuEf5hdRSWVNmJhtZSMHn8yPHspEiVBQA/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="pd-link">
+                            <span>📄</span> Bekijk Document
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
 
