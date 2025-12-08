@@ -1,0 +1,533 @@
+.reflectie-indicator {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    background: rgba(79, 140, 255, 0.1);
+    border-radius: 1rem;
+}
+/* Opdracht detail pagina styling */
+.opdracht-detail {
+    background: var(--card);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin: 0 1rem;
+}
+
+.opdracht-detail h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.opdracht-info {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.reflectie-sectie {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.reflectie-sectie h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#reflectie-tekst {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(74, 144, 226, 0.2);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    resize: vertical;
+    min-height: 150px;
+    background: var(--background);
+    white-space: pre-wrap;
+    font-family: inherit;
+}
+
+#reflectie-tekst:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+#opslaan-btn, #bewerk-btn {
+    background: var(--gradient);
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#opslaan-btn:hover, #bewerk-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* Google Docs knop onder reflectie */
+.google-doc-btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid rgba(42,57,144,0.12);
+    border-radius: 1.2rem;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    align-self: center;
+}
+.google-doc-btn:hover {
+    background: rgba(42,57,144,0.06);
+    transform: translateY(-2px);
+}
+
+/* Doc link editor */
+.google-doc-edit-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+}
+.google-doc-edit-btn:hover {
+    background: rgba(0,0,0,0.04);
+}
+#doc-editor {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+    align-items: center;
+}
+#doc-editor input {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+.doc-editor-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+#save-doc-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+#cancel-doc-btn {
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+
+#opgeslagen-reflectie {
+    background: var(--background);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+#reflectie-content {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.terug-btn {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.terug-btn:hover {
+    opacity: 1;
+}
+
+.verborgen {
+    display: none;
+}
+.verwijder-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: #ff4d4f;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #ff4d4f22;
+    transition: background 0.2s, transform 0.2s;
+    z-index: 2;
+}
+.verwijder-btn:hover {
+    background: #d9363e;
+    transform: scale(1.1);
+}
+
+/* --- Modern Personal Development Portfolio Styles --- */
+
+:root {
+    --primary: #2a3990;
+    --secondary: #4a90e2;
+    --accent: #f9c80e;
+    --text: #2c3e50;
+    --background: #f0f4f8;
+    --card: #ffffff;
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    --shadow: 0 8px 30px rgba(42, 57, 144, 0.1);
+    --card-hover: 0 12px 40px rgba(42, 57, 144, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.pd-header {
+    background: var(--gradient);
+    position: relative;
+    padding: 4rem 2rem 6rem;
+    margin-bottom: 4rem;
+    color: #fff;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.pd-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.pd-header p {
+    margin: 0;
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.intro {
+    background: var(--card);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.opdrachten-lijst h2 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+#opdrachten-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.opdracht-card {
+    background: var(--card);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-top: 4px solid var(--accent);
+    position: relative;
+    overflow: hidden;
+}
+.opdracht-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(79, 140, 255, 0.15);
+}
+.opdracht-card .titel {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+.opdracht-card .beschrijving {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+.opdracht-card .reflectie {
+    background: var(--secondary);
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    margin-top: 1rem;
+    font-size: 0.98rem;
+    color: #444;
+}
+
+#nieuwe-opdracht-btn {
+    background: var(--gradient);
+    color: #fff;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+    display: block;
+    margin: 3rem auto;
+}
+#nieuwe-opdracht-btn:hover {
+    background: var(--accent);
+    color: #222;
+}
+
+#nieuwe-opdracht-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--card);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+#nieuwe-opdracht-form.verborgen {
+    display: none;
+}
+#nieuwe-opdracht-form input,
+#nieuwe-opdracht-form textarea {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dbeafe;
+    background: var(--secondary);
+    resize: none;
+}
+#nieuwe-opdracht-form button[type="submit"] {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem 2rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background 0.2s;
+}
+#nieuwe-opdracht-form button[type="submit"]:hover {
+    background: var(--accent);
+    color: #222;
+}
+#annuleer-btn {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 2rem;
+    padding: 0.7rem 2rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+#annuleer-btn:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.opdracht-buttons {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.edit-btn, .verwijder-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.edit-btn:hover, .verwijder-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.edit-form {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-titel {
+  font-size: 18px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.edit-beschrijving {
+  min-height: 100px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.edit-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.opslaan-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.opslaan-btn:hover {
+  background-color: #45a049;
+}
+
+.annuleer-edit-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.annuleer-edit-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.verwijder-in-edit-btn.danger {
+  background-color: #ff4444;
+  color: white;
+}
+
+.verwijder-in-edit-btn.danger:hover {
+  background-color: #cc0000;
+}
+
+.pd-footer {
+    background: var(--gradient);
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    margin-top: 6rem;
+}
+
+.pd-footer p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 1rem;
+}
+
+.opdracht-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.opdracht-header h1 {
+    margin: 0;
+}
+
+#opdracht-edit-form {
+    margin-bottom: 20px;
+}
+
+#opdracht-edit-form.verborgen {
+    display: none;
+}
+
+#opdracht-content.verborgen {
+    display: none;
+}
+
+/* LinkedIn button under intro */
+.intro .intro-actions {
+    margin-top: 1rem;
+}
+.linkedin-btn {
+    display: inline-block;
+    background: #0A66C2;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 12px rgba(10,102,194,0.12);
+}
+.linkedin-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(10,102,194,0.18);
+}
+.linkedin-btn:active {
+    transform: translateY(-1px);
+}

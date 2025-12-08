@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Development Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="pd-header">
+        <h1>Personal Development</h1>
+        <p>Ontdek mijn persoonlijke groei en ontwikkeling tijdens de studie</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Welkom bij mijn PD Portfolio</h2>
+            <p>Hier documenteer ik mijn reis van persoonlijke ontwikkeling, reflecties en belangrijke leermomenten
+                tijdens mijn studie. Elke opdracht vertegenwoordigt een stap vooruit in mijn groei.</p>
+        </section>
+
+        <div class="intro-actions" style="text-align:center; margin-bottom:2rem;">
+            <a class="linkedin-btn" href="https://www.linkedin.com/in/thijmen-bout-b343b7371" target="_blank" rel="noopener noreferrer">Volg mij op LinkedIn</a>
+        </div>
+
+        <section class="opdrachten-lijst">
+            <h2>Mijn Ontwikkeling</h2>
+            <div id="opdrachten-container"></div>
+            <button id="nieuwe-opdracht-btn">+ Nieuwe opdracht toevoegen</button>
+
+            <form id="nieuwe-opdracht-form" class="verborgen">
+                <input type="text" id="titel" placeholder="Wat is de titel van je opdracht?" required />
+                <textarea id="beschrijving" placeholder="Beschrijf de opdracht en je leerdoelen..." required></textarea>
+                <div class="form-buttons">
+                    <button type="submit">Opdracht opslaan</button>
+                    <button type="button" id="annuleer-btn">Annuleren</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pd-footer">
+        <p>&copy; 2025 Personal Development | Gemaakt door Thijmen</p>
+    </footer>
+</body>
+
+</html>

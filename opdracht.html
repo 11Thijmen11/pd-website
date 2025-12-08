@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht Details - Personal Development</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="opdracht.js"></script>
+</head>
+<body>
+    <header class="pd-header">
+        <h1>Personal Development Portfolio</h1>
+        <nav>
+            <a href="index.html" class="terug-btn">← Terug naar overzicht</a>
+        </nav>
+    </header>
+    <main>
+        <article class="opdracht-detail">
+            <div class="opdracht-header">
+                <h1 id="opdracht-titel"></h1>
+                <button id="edit-opdracht-btn" class="edit-btn" title="Bewerk opdracht">✎</button>
+            </div>
+            <div id="opdracht-edit-form" class="edit-form verborgen">
+                <input type="text" id="edit-titel" class="edit-titel" placeholder="Titel">
+                <textarea id="edit-beschrijving" class="edit-beschrijving" placeholder="Beschrijving"></textarea>
+                <div class="edit-buttons">
+                    <button id="opslaan-edit-btn" class="opslaan-btn">Opslaan</button>
+                    <button id="annuleer-edit-btn" class="annuleer-edit-btn">Annuleren</button>
+                </div>
+            </div>
+            <div id="opdracht-content">
+                <p id="opdracht-beschrijving"></p>
+            </div>
+            <div class="reflectie-sectie">
+                <h3>Jouw Reflectie</h3>
+                <div id="reflectie-container">
+                    <textarea id="reflectie-tekst" placeholder="Schrijf hier je reflectie..." rows="8"></textarea>
+                    <div class="button-group">
+                        <button id="opslaan-btn">Reflectie Opslaan</button>
+                        <!-- Google Docs link (per opdracht bewerkbaar) -->
+                        <a id="google-doc-btn" class="google-doc-btn" href="#" target="_blank" rel="noopener" title="Open bijhorende Google Doc">Open bijhorende Google Doc</a>
+                        <button id="edit-doc-btn" class="google-doc-edit-btn" type="button" title="Bewerk Google Doc link">✎</button>
+                    </div>
+                    <div id="doc-editor" class="verborgen">
+                        <input id="doc-url-input" type="url" placeholder="Plak hier de Google Docs share-link" />
+                        <div class="doc-editor-buttons">
+                            <button id="save-doc-btn">Opslaan link</button>
+                            <button id="cancel-doc-btn" type="button">Annuleren</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div id="opgeslagen-reflectie" class="verborgen">
+                    <div id="reflectie-content"></div>
+                    <button id="bewerk-btn">Bewerk Reflectie</button>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="pd-footer">
+        <p>&copy; 2025 Personal Development | Gemaakt door Thijmen</p>
+    </footer>
+</body>
+</html>
