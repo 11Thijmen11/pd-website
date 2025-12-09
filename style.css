@@ -749,9 +749,26 @@ body {
 
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featured-card {
+    grid-column: 1;
+}
+
+.about-grid-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-card {
@@ -784,6 +801,56 @@ body {
 .about-card p {
     color: var(--text-light);
     line-height: 1.6;
+}
+
+.huidige-functie {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.functie-card {
+    background: white;
+    border: 2px solid rgba(14, 165, 233, 0.15);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.functie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(14, 165, 233, 0.25);
+}
+
+.functie-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.functie-card h3 {
+    color: var(--primary);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.functie-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.functie-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.functie-card p:last-child {
+    margin: 0;
 }
 
 .contact-section {
@@ -1780,6 +1847,18 @@ main {
 
     .about-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-grid-three {
+        grid-template-columns: 1fr;
+    }
+
+    .huidige-functie {
+        padding: 0 1rem;
+    }
+
+    .functie-card {
+        padding: 2rem 1.5rem;
     }
     
     #opdrachten-container {
